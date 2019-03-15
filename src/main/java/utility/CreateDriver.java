@@ -1,15 +1,14 @@
 package utility;
 
+import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import java.util.concurrent.TimeUnit;
-
 public class CreateDriver {
 
     private static WebDriver driver;
-    public static final String CHROME_DRIVER_PATH = "src/main/resources/drivers_exe/chromedriver.exe";
+  public static final String CHROME_DRIVER_PATH = "src/test/resources/drivers_exe/chromedriver.exe";
 
     public static WebDriver startLocalBrowser(String browserName) {
         try {

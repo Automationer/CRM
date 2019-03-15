@@ -1,3 +1,5 @@
+@LoginTest
+
 Feature: Login
 
   Scenario: User should be able to Successfully login

@@ -3,7 +3,11 @@ package base;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import utility.elements.*;
+import utility.elements.AlertHandler;
+import utility.elements.CommonElementOps;
+import utility.elements.FindBy;
+import utility.elements.JavascriptHelper;
+import utility.elements.Waits;
 
 // Base of every other page object classes, declared as an abstract class
 // so it cannot be instantiated and no other object can be created. 
@@ -12,15 +16,13 @@ public abstract class PageBase {
 	private static WebDriver driver;
 	private WebDriverWait explicitWait;
 
-	// Utilities and Helpers are initialized here
-	// any extending Page Object Class can use these
-	protected static JavascriptHelper jsHelper; // all useful JavaScript executor method
-	protected Waits waiter;        // all useful wait methods
-	protected FindBy elemWith;     // all useful element finder method
-	protected AlertHandler alerts;  // all useful alert box methods
-	protected CommonElementOps elemOps; // all useful common element operations
 
-	// Constructor - Initializations
+  protected static JavascriptHelper jsHelper;
+  protected Waits waiter;
+  protected FindBy elemWith;
+  protected AlertHandler alerts;
+  protected CommonElementOps elemOps;
+
 	public PageBase(WebDriver incomingDriver) {
 		this.driver = incomingDriver;
 		this.explicitWait = new WebDriverWait(driver, 50);

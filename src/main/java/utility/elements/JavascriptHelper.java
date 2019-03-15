@@ -124,8 +124,8 @@ public class JavascriptHelper {
 			try {
 				Thread.sleep(500);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+
+        e.printStackTrace();
 			}
 			js.executeScript("arguments[0].setAttribute('style', arguments[1]);", element, "");
 		}
