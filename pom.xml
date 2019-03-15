@@ -14,6 +14,7 @@
     <serenity.maven.version>1.5.11</serenity.maven.version>
     <serenity.cucumber.version>1.5.7</serenity.cucumber.version>
     <cucumber.version>1.2.5</cucumber.version>
+    <java.version>11</java.version>
   </properties>
 
     <dependencies>
