@@ -9,11 +9,11 @@ import pageObjects.TasksTestPages.TasksPage;
 
 public class CreateNewTask_StepDef {
 
-  TasksPage tasksPage = new TasksPage();
-  NewTasksOptionPage newTasksOptionPage = new NewTasksOptionPage();
+  private TasksPage tasksPage = new TasksPage();
+  private NewTasksOptionPage newTasksOptionPage = new NewTasksOptionPage();
 
   @When("^User clicks on New Task option$")
-  public void user_clicks_on_New_Task_option() throws InterruptedException {
+  public void user_clicks_on_New_Task_option() {
     tasksPage.clickOnNewTaskOption();
   }
 

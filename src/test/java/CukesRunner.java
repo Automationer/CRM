@@ -5,12 +5,11 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 
 @CucumberOptions(plugin = {"pretty", "html:target/cucumber", "json:target/cucumber.json"
-        , "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-extentReports/report.html"},
-        features = {"classpath:crm_features"},
-        tags = "@CreateTask",
-        dryRun = false)
+    , "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-extentReports/report.html"},
+    features = {"classpath:crm_features"},
+    tags = "@CreateContact",
+    dryRun = false)
 
 public class CukesRunner {
-
 
 }

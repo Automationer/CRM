@@ -19,7 +19,7 @@ public class CreateNewContact_StepDef {
     }
 
     @Given("^User clicks on New Contact option$")
-    public void user_clicks_on_New_Contact_option() throws Throwable {
+    public void user_clicks_on_New_Contact_option() {
         contactsPage.clickOnNewContactsOption();
     }
 

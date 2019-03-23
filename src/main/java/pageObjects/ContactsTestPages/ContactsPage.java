@@ -2,29 +2,26 @@ package pageObjects.ContactsTestPages;
 
 import base.PageBase;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utility.ComponentClick;
 
 public class ContactsPage extends PageBase {
 
-    public ContactsPage() {
-        PageFactory.initElements(driver(), this);
-    }
+  public ContactsPage() {
+    PageFactory.initElements(driver(), this);
+  }
 
-    @FindBy(css = "[title='Contacts']")
-    private WebElement contacts_Tab;
+  private ComponentClick componentClick = new ComponentClick();
 
-    @FindBy(css = "a[title='New Contact']")
-    private WebElement newContactOption;
+  @FindBy(css = "[title='Contacts']")
+  private WebElement contacts_Tab;
 
-    public void clickOnNewContactsOption() throws InterruptedException {
-        Thread.sleep(2000);
-        Actions actions = new Actions(driver());
-        actions.moveToElement(contacts_Tab)
-                .moveToElement(newContactOption)
-                .click().build().perform();
-        Thread.sleep(2000);
-    }
+  @FindBy(css = "a[title='New Contact']")
+  private WebElement newContactOption;
+
+  public void clickOnNewContactsOption() {
+    componentClick.hoverOverThenClick(contacts_Tab, newContactOption);
+  }
 
 }
