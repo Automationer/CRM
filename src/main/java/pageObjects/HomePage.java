@@ -7,23 +7,33 @@ import org.openqa.selenium.support.PageFactory;
 
 public class HomePage extends PageBase {
 
-    @FindBy(css = "[title='Contacts']")
-    WebElement contacts_Tab;
+  @FindBy(css = "[title='Contacts']")
+  WebElement contacts_Tab;
 
-    @FindBy(css = "form[name='CONTACTSEARCH']")
-    WebElement contacts_SearchForm;
+  @FindBy(css = "[title='Tasks']")
+  WebElement tasks_Tab;
 
-    public HomePage() {
-        PageFactory.initElements(driver(), this);
-    }
+  @FindBy(css = "form[name='CONTACTSEARCH']")
+  WebElement contacts_SearchForm;
 
-    public void clickOn_ContactsTab() {
-        contacts_Tab.click();
-    }
+  @FindBy(css = "[name='TASKSEARCH']")
+  WebElement tasks_SearchForm;
 
-    public boolean isContactsContentDisplayed() {
-        return contacts_SearchForm.isDisplayed();
-    }
+  public HomePage() {
+    PageFactory.initElements(driver(), this);
+  }
 
+  public void clickOn_ContactsTab() {
+    contacts_Tab.click();
+  }
 
+  public boolean isContactsContentDisplayed() {
+    return contacts_SearchForm.isDisplayed();
+  }
+
+  public void clickOn_TasksTab() { tasks_Tab.click();}
+
+  public boolean isTasksContentDisplayed() {
+    return tasks_SearchForm.isDisplayed();
+  }
 }

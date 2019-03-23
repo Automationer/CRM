@@ -1,4 +1,4 @@
-package pageObjects;
+package pageObjects.ContactsTestPages;
 
 import base.PageBase;
 import org.openqa.selenium.WebElement;
@@ -13,10 +13,10 @@ public class ContactsPage extends PageBase {
     }
 
     @FindBy(css = "[title='Contacts']")
-    WebElement contacts_Tab;
+    private WebElement contacts_Tab;
 
     @FindBy(css = "a[title='New Contact']")
-    WebElement newContactOption;
+    private WebElement newContactOption;
 
     public void clickOnNewContactsOption() throws InterruptedException {
         Thread.sleep(2000);

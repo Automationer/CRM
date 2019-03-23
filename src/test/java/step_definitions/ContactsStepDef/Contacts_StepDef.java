@@ -1,4 +1,4 @@
-package step_definitions;
+package step_definitions.ContactsStepDef;
 
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;

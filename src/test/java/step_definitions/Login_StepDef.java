@@ -10,7 +10,7 @@ import static junit.framework.TestCase.assertTrue;
 
 public class Login_StepDef {
 
-    static LoginPage loginPage;
+    private static LoginPage loginPage;
 
 
     @Given("^User goes to CRM$")

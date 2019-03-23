@@ -1,4 +1,4 @@
-package pageObjects;
+package pageObjects.ContactsTestPages;
 
 import base.PageBase;
 import org.openqa.selenium.WebElement;
@@ -14,16 +14,16 @@ public class NewContactsOptionPage extends PageBase {
     }
 
     @FindBy(css = "#first_name")
-    WebElement firstNameTextBox;
+    private WebElement firstNameTextBox;
 
     @FindBy(css = "#surname")
-    WebElement lastNameTextBox;
+    private WebElement lastNameTextBox;
 
     @FindBy(css = "input[value='Save']:nth-of-type(2)")
-    WebElement saveButton;
+    private WebElement saveButton;
 
     @FindBy(xpath = "//*[@id='vSummary']/table/tbody/tr[2]/td[1]/table/tbody/tr[2]/td[2]/span")
-    List<WebElement> firstAndLastNames;
+    public List<WebElement> firstAndLastNames;
 
     public void fillOut_form() throws InterruptedException {
         firstNameTextBox.sendKeys("Jack");
@@ -37,6 +37,5 @@ public class NewContactsOptionPage extends PageBase {
         String lastName = firstAndLastNames.get(1).getText();
         return firstName.equals("Jack") && lastName.equals("Johnson");
     }
-
 
 }

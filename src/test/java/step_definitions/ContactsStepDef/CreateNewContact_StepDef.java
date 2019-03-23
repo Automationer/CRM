@@ -1,17 +1,22 @@
-package step_definitions;
+package step_definitions.ContactsStepDef;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import pageObjects.ContactsPage;
-import pageObjects.NewContactsOptionPage;
+import pageObjects.ContactsTestPages.ContactsPage;
+import pageObjects.ContactsTestPages.NewContactsOptionPage;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class CreateNewContact_StepDef {
 
-    private ContactsPage contactsPage = new ContactsPage();
-    private NewContactsOptionPage newContactsOptionPage = new NewContactsOptionPage();
+    private ContactsPage contactsPage;
+    private NewContactsOptionPage newContactsOptionPage;
+
+    public CreateNewContact_StepDef() {
+        newContactsOptionPage = new NewContactsOptionPage();
+        contactsPage = new ContactsPage();
+    }
 
     @Given("^User clicks on New Contact option$")
     public void user_clicks_on_New_Contact_option() throws Throwable {
