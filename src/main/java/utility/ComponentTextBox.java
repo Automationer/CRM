@@ -12,14 +12,25 @@ public class ComponentTextBox extends PageBase {
 
   }
 
-  public void enter(WebElement element, String input) {
+  public ComponentTextBox enterWithGreen(WebElement element, String input)
+      throws InterruptedException {
+    greenColor(element);
+    element.sendKeys(input);
+    return this;
+  }
+
+  public boolean enter(WebElement element, String input) {
     if (isHighLight_On && count != 0) {
       new HighLight(element, count);
       element.sendKeys(input);
     } else {
       element.sendKeys(input);
     }
+    return !element.getText().isEmpty();
   }
 
+  private void greenColor(WebElement element) throws InterruptedException {
+    new HighLight().highLight_Green(element);
+  }
 
 }

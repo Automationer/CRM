@@ -22,6 +22,11 @@ public class ComponentClick extends PageBase {
     }
   }
 
+  public void clickWithGreen(WebElement element) throws InterruptedException {
+    greenColor(element);
+    element.click();
+  }
+
   public void hoverOverThenClick(WebElement hoverElement, WebElement clickElement) {
     Actions actions = new Actions(driver());
     if (isHighLight_On && count != 0) {
@@ -32,5 +37,8 @@ public class ComponentClick extends PageBase {
         .click().build().perform();
   }
 
+  private void greenColor(WebElement element) throws InterruptedException {
+    new HighLight().highLight_Green(element);
+  }
 
 }
