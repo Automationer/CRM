@@ -7,11 +7,13 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import pageObjects.DemoPageObjects;
+import pageObjects.Hipmunk;
 import pageObjects.LoginPage;
 
 public class Demo_StepDef extends PageBase {
 
   private DemoPageObjects demoPageObjects = new DemoPageObjects();
+  private Hipmunk hipmunk = new Hipmunk();
   private LoginPage loginPage;
 
   @And("User highlights all header nav tabs")
@@ -45,15 +47,15 @@ public class Demo_StepDef extends PageBase {
     demoPageObjects.fillOutForm();
   }
 
-  @Given("^User goes to Expedia$")
-  public void user_goes_to_Expedia() {
-    loginPage = new LoginPage(TestBase.getDriver(), "expedia");
+  @Given("^User goes to Hipmunk$")
+  public void user_goes_to_Hipmunk() {
+    loginPage = new LoginPage(TestBase.getDriver(), "hipmunk");
   }
 
-  @When("^User searches for a flight ticket from United States to East Turkistan$")
-  public void user_searches_for_a_flight_ticket_from_United_States_to_East_Turkistan()
+  @When("^User searches for a flight ticket from VA to CA")
+  public void user_searches_for_a_flight_ticket_from_VA_to_CA()
       throws InterruptedException {
-    demoPageObjects.fillOutFlightInformationTable("united states", "East Turkistan");
+    hipmunk.fillOutFlightInformationTable();
   }
 
   @Then("^User should be provided with best deals$")

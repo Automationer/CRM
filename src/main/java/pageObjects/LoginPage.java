@@ -26,8 +26,8 @@ public class LoginPage extends PageBase {
         String crm_URL = "https://classic.crmpro.com/index.html";
         driver().get(crm_URL);
         break;
-      case "expedia":
-        String expedia_URL = "https://expedia.com";
+      case "hipmunk":
+        String expedia_URL = "https://www.hipmunk.com/flights";
         driver().get(expedia_URL);
         break;
     }
