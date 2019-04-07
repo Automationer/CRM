@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 public class ComponentTextBox extends PageBase {
 
   private boolean isHighLight_On = true;
-  private int count = 4;
+  private int count = 2;
 
   public ComponentTextBox() {
 

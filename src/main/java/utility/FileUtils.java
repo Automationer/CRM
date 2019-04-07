@@ -64,7 +64,7 @@ public class FileUtils {
 	 * @return complete relative path of the driver file
 	 */
 	public static String getDriversPath(String driverName) {
-		String filePath = "\\src\\test\\resources\\drivers_exe\\" + driverName + ".exe";
+		String filePath = "src/test/resources/drivers_exe/" + driverName;
 		String path = System.getProperty("user.dir") + filePath;
 		return path;
 	}

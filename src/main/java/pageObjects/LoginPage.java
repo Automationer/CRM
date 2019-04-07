@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utility.ComponentTextBox;
 
 public class LoginPage extends PageBase {
 
@@ -18,6 +19,8 @@ public class LoginPage extends PageBase {
   @FindBy(css = "[type='submit']")
   WebElement loginButton;
 
+  ComponentTextBox textBox = new ComponentTextBox();
+
   public LoginPage(WebDriver incomingDriver, String websiteName) {
     super(incomingDriver);
     PageFactory.initElements(driver(), this);
@@ -25,10 +28,12 @@ public class LoginPage extends PageBase {
       case "crm":
         String crm_URL = "https://classic.crmpro.com/index.html";
         driver().get(crm_URL);
+        driver().manage().window().fullscreen();
         break;
       case "hipmunk":
-        String expedia_URL = "https://www.hipmunk.com/flights";
-        driver().get(expedia_URL);
+        String hiphunk_url = "https://www.hipmunk.com/flights";
+        driver().get(hiphunk_url);
+        driver().manage().window().fullscreen();
         break;
     }
   }
@@ -41,8 +46,7 @@ public class LoginPage extends PageBase {
     passwordTextBox.sendKeys("Ilzat@94");
   }
 
-  public void clickLoginButton() throws InterruptedException {
-    Thread.sleep(2000);
+  public void clickLoginButton() {
     loginButton.click();
   }
 

@@ -23,7 +23,7 @@ public class TestBase {
     }
 
     public static WebDriver getDriver() {
-        System.out.println("driver from test base---->" + driver);
+
         return driver;
     }
 

@@ -43,7 +43,6 @@ public abstract class PageBase {
 
 
     protected WebDriver driver() {
-        System.out.println("driver from page base---->" + driver);
         return driver;
     }
 

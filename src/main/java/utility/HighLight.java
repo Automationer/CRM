@@ -41,7 +41,7 @@ public class HighLight extends PageBase {
   public void highLight_Red(WebElement element) throws InterruptedException {
     JavascriptExecutor js = (JavascriptExecutor) driver();
     js.executeScript(
-        "arguments[0].setAttribute('style', 'background: #334FFF; border: 3px solid red;');",
+        "arguments[0].setAttribute('style', 'background: #FF334F; border: 3px solid red;');",
         element);
     Thread.sleep(500);
     js.executeScript(
@@ -53,21 +53,6 @@ public class HighLight extends PageBase {
     JavascriptExecutor js = (JavascriptExecutor) driver();
     js.executeScript(
         "arguments[0].setAttribute('style', 'background: purple; border: 3px solid purple;');",
-        element);
-    Thread.sleep(500);
-    js.executeScript(
-        "arguments[0].setAttribute('style', '');",
-        element);
-  }
-
-  public void highLight_Liver(WebElement element) throws InterruptedException {
-    JavascriptExecutor js = (JavascriptExecutor) driver();
-    js.executeScript(
-        "arguments[0].setAttribute('style', 'background: #E74C3C; border: 2px solid red;');",
-        element);
-    Thread.sleep(1000);
-    js.executeScript(
-        "arguments[0].setAttribute('style', 'background: #13EE46; border: 2px solid yellow;');",
         element);
     Thread.sleep(500);
     js.executeScript(

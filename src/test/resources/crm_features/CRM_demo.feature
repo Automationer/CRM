@@ -1,5 +1,6 @@
 @SmokeTest
-@DemoSmoke1
+@DemoSmoke
+@crm
 
 Feature: Header Tabs
 
@@ -11,3 +12,4 @@ Feature: Header Tabs
     And User highlights calendar
     And User hover overs header nav tabs
     And User should be able to create a new deal
+  #  And User should verify left menu pages

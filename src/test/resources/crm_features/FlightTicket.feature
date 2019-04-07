@@ -1,5 +1,6 @@
 @SmokeTest
-@DemoSmoke2
+@DemoSmoke
+@Flight
 
 Feature: Search for flight tickets
 

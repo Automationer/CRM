@@ -41,6 +41,11 @@ public class Demo_StepDef extends PageBase {
     demoPageObjects.hoverOverHeadNavTabs();
   }
 
+  @And("User should verify left menu pages")
+  public void User_should_verify_left_menu_pages() throws InterruptedException {
+    demoPageObjects.leftShouldMenuListsDisplayCorrectPages();
+  }
+
   @And("User should be able to create a new deal")
   public void User_should_be_able_to_create_a_new_deal() {
     demoPageObjects.createNewDeal();

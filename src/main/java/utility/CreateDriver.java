@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 public class CreateDriver {
 
     private static WebDriver driver;
-    public static final String CHROME_DRIVER_PATH = "src/main/resources/drivers_exe/chromedriver.exe";
+    private static final String CHROME_DRIVER_PATH = "src/main/resources/drivers_exe/chromedriver";
 
     public static WebDriver startLocalBrowser(String browserName) {
         try {
@@ -36,7 +36,6 @@ public class CreateDriver {
     private static WebDriver startChromeBrowser() {
         try {
             System.out.println("CHROME FILE:: " + FileUtils.getDriversPath("chromedriver"));
-           // System.setProperty("webdriver.chrome.driver", FileUtils.getDriversPath("chromedriver"));
             System.setProperty("webdriver.chrome.driver", CHROME_DRIVER_PATH);
             driver = new ChromeDriver();
             driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -55,8 +54,6 @@ public class CreateDriver {
         try {
             System.setProperty("webdriver.gecko.driver", FileUtils.getDriversPath("geckcodriver"));
             driver = new FirefoxDriver();
-            // driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-            // driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
             driver.manage().window().maximize();
         } catch (Exception ex) {
             ex.printStackTrace();
