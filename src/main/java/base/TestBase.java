@@ -3,6 +3,7 @@ package base;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import utility.CreateDriver;
 
 public class TestBase {
@@ -11,7 +12,8 @@ public class TestBase {
 
     @Before
     public void setUp() {
-        driver = CreateDriver.startLocalBrowser("chrome");
+        driver = new ChromeDriver();
+
     }
 
     @After

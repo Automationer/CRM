@@ -1,10 +1,10 @@
-package step_definitions;
+package step_definitions.ContactsStepDef;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import pageObjects.ContactsPage;
-import pageObjects.NewContactsOptionPage;
+import pageObjects.ContactsTestPages.ContactsPage;
+import pageObjects.ContactsTestPages.NewContactsOptionPage;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

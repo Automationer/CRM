@@ -1,4 +1,4 @@
-package pageObjects;
+package pageObjects.ContactsTestPages;
 
 import base.PageBase;
 import org.openqa.selenium.WebElement;

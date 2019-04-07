@@ -10,8 +10,14 @@ public class HomePage extends PageBase {
     @FindBy(css = "[title='Contacts']")
     WebElement contacts_Tab;
 
+    @FindBy(css = "[title='Tasks']")
+    WebElement tasks_Tab;
+
     @FindBy(css = "form[name='CONTACTSEARCH']")
     WebElement contacts_SearchForm;
+
+    @FindBy(css = "form[name='TASKSEARCH']")
+    WebElement tasks_SearchForm;
 
     public HomePage() {
         PageFactory.initElements(driver(), this);
@@ -21,9 +27,9 @@ public class HomePage extends PageBase {
         contacts_Tab.click();
     }
 
-    public boolean isContactsContentDisplayed() {
-        return contacts_SearchForm.isDisplayed();
-    }
+    public boolean isContactsContentDisplayed() { return contacts_SearchForm.isDisplayed(); }
 
+    public void clickOn_TasksTab() { tasks_Tab.click(); }
 
+    public boolean isTasksContentDisplayed() { return tasks_SearchForm.isDisplayed();}
 }
