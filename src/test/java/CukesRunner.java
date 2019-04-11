@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(plugin = {"pretty", "html:target/cucumber", "json:target/cucumber.json"
         , "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-extentReports/report.html"},
         features = {"classpath:crm_features"},
-        tags = "@CreateTask",
+        tags = "@CreateNewDocTest",
         dryRun = false)
 
 public class CukesRunner {
