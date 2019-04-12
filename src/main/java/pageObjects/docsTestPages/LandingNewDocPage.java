@@ -7,8 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LandingNewDocPage extends PageBase {
 
-    @FindBy(xpath = "//td/a[contains(text(), ' Game document')]")
-    WebElement assertPageTitle;
+    @FindBy(xpath = "/html/body/table[2]/tbody/tr[1]/td[2]/table/tbody/tr/td/table/tbody/tr[4]/td/table/tbody/tr[1]/td/strong")
+    WebElement descriptionTag;
 
     public LandingNewDocPage(){
         PageFactory.initElements(driver(), this);
@@ -16,8 +16,8 @@ public class LandingNewDocPage extends PageBase {
 
     public boolean DocumentSavedSuccessfully() throws InterruptedException {
         Thread.sleep(2000);
-        String titleName = assertPageTitle.getText();
+        String titleName = descriptionTag.getText();
         System.out.println("the title name is: " + titleName);
-        return titleName.equalsIgnoreCase(" Game document");
+        return titleName.equalsIgnoreCase("Description");
     }
 }
