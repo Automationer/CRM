@@ -1,0 +1,156 @@
+[
+  {
+    "line": 4,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 35371102,
+              "status": "passed"
+            },
+            "match": {
+              "location": "TestBase.setUp()"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "User should be able to Successfully login with valid username and password",
+        "description": "",
+        "id": "login---gherkin-language;user-should-be-able-to-successfully-login-with-valid-username-and-password",
+        "after": [
+          {
+            "result": {
+              "duration": 38907,
+              "status": "passed"
+            },
+            "match": {
+              "location": "TestBase.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 167539602,
+              "error_message": "java.lang.NullPointerException\n\tat com.google.common.base.Preconditions.checkNotNull(Preconditions.java:787)\n\tat org.openqa.selenium.support.ui.FluentWait.\u003cinit\u003e(FluentWait.java:96)\n\tat org.openqa.selenium.support.ui.WebDriverWait.\u003cinit\u003e(WebDriverWait.java:71)\n\tat org.openqa.selenium.support.ui.WebDriverWait.\u003cinit\u003e(WebDriverWait.java:45)\n\tat base.PageBase.\u003cinit\u003e(PageBase.java:24)\n\tat pageObjects.LoginPage.\u003cinit\u003e(LoginPage.java:24)\n\tat step_definitions.Login_StepDef.user_goes_to_CRM(Login_StepDef.java:18)\n\tat ✽.Given User goes to CRM(crm_features/Login.feature:7)\n",
+              "status": "failed"
+            },
+            "line": 7,
+            "name": "User goes to CRM",
+            "match": {
+              "location": "Login_StepDef.user_goes_to_CRM()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "User enters valid credentials",
+            "match": {
+              "location": "Login_StepDef.user_enters_valid_credentials()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "User should successfully log into CRM",
+            "match": {
+              "location": "Login_StepDef.user_should_successfully_log_into_CRM()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 5771039,
+              "status": "passed"
+            },
+            "match": {
+              "location": "TestBase.setUp()"
+            }
+          }
+        ],
+        "line": 12,
+        "name": "User should not be able to login with valid username and invalid password",
+        "description": "",
+        "id": "login---gherkin-language;user-should-not-be-able-to-login-with-valid-username-and-invalid-password",
+        "after": [
+          {
+            "result": {
+              "duration": 26883,
+              "status": "passed"
+            },
+            "match": {
+              "location": "TestBase.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 403241,
+              "error_message": "java.lang.NullPointerException\n\tat com.google.common.base.Preconditions.checkNotNull(Preconditions.java:787)\n\tat org.openqa.selenium.support.ui.FluentWait.\u003cinit\u003e(FluentWait.java:96)\n\tat org.openqa.selenium.support.ui.WebDriverWait.\u003cinit\u003e(WebDriverWait.java:71)\n\tat org.openqa.selenium.support.ui.WebDriverWait.\u003cinit\u003e(WebDriverWait.java:45)\n\tat base.PageBase.\u003cinit\u003e(PageBase.java:24)\n\tat pageObjects.LoginPage.\u003cinit\u003e(LoginPage.java:24)\n\tat step_definitions.Login_StepDef.user_goes_to_CRM(Login_StepDef.java:18)\n\tat ✽.Given User goes to CRM(crm_features/Login.feature:13)\n",
+              "status": "failed"
+            },
+            "line": 13,
+            "name": "User goes to CRM",
+            "match": {
+              "location": "Login_StepDef.user_goes_to_CRM()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 14,
+            "name": "User enters valid credentials",
+            "match": {
+              "location": "Login_StepDef.user_enters_valid_credentials()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 15,
+            "name": "User should successfully log into CRM",
+            "match": {
+              "location": "Login_StepDef.user_should_successfully_log_into_CRM()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login   Gherkin language",
+    "description": "",
+    "id": "login---gherkin-language",
+    "keyword": "Feature",
+    "uri": "crm_features/Login.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@SmokeTest"
+      },
+      {
+        "line": 2,
+        "name": "@LoginFeature"
+      }
+    ]
+  }
+]
